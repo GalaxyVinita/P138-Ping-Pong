@@ -1,6 +1,8 @@
 rightWristX = 0;
 rightWristY = 0;
 scoreRightWrist = 0;
+game_status = "";
+
 
 function restart()
 {
@@ -62,4 +64,15 @@ function draw(){
     fill("red");
     stroke("red");
     circle(rightWristX, rightWristY, 30);
+  }
+
+  if(game_status == "start")
+  {
+    document.getElementById("status").innerHTML = "Game Is Loaded";
+    }
+}
+  function startGame()
+  {
+    game_status = "start";
+    document.getElementById("status").innerHTML = "Game Is Loaded"
   }
